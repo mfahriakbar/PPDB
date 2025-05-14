@@ -24,6 +24,11 @@
                 </div>
             </div>
             <nav>
+                <div class="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
                 <ul>
                     <li><a href="index.html">Beranda</a></li>
                     <li><a href="#kompetensi">Kompetensi</a></li>
@@ -472,44 +477,27 @@
         </div>
     </footer>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        // Toggle menu hp
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('nav ul');
 
-            const headerContent = document.querySelector('.header-content');
-            const nav = document.querySelector('nav');
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
 
-            const hamburger = document.createElement('button');
-            hamburger.className = 'hamburger';
-            hamburger.innerHTML = '<span></span><span></span><span></span>';
-            headerContent.appendChild(hamburger);
+        document.querySelectorAll('nav ul li a').forEach(link => {
+            link.addEventListener('click', () => {
+                menuToggle.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
 
-            const overlay = document.createElement('div');
-            overlay.className = 'overlay';
-            document.body.appendChild(overlay);
-
-            function toggleMenu() {
-                hamburger.classList.toggle('active');
-                nav.classList.toggle('active');
-                overlay.classList.toggle('active');
-                document.body.style.overflow = nav.classList.contains('active') ? 'hidden': '';
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('nav') && navMenu.classList.contains('active')) {
+                menuToggle.classList.remove('active');
+                navMenu.classList.remove('active');
             }
-
-            hamburger.addEventListener('click', toggleMenu);
-            overlay.addEventListener('click', toggleMenu);
-
-            const navLinks = document.querySelectorAll('nav ul li a');
-            navLinks.forEach(link => {
-                link.addEventListener('click', function() {
-                    if (nav.classList.contains('active')) {
-                        toggleMenu();
-                    }
-                });
-            });
-
-            window.addEventListener('resize', function() {
-                if (window.innerWidth > 768 && nav.classList.contains('active')) {
-                    toggleMenu();
-                }
-            });
         });
     </script>
 </body>
