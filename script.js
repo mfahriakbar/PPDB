@@ -143,27 +143,25 @@ document.addEventListener('DOMContentLoaded', function() {
                 const whatsappMessage =
                 `*FORMULIR PENDAFTARAN SMK BINA INFORMATIKA*
 
-                *DATA SISWA*
-                Nama Lengkap: ${fullName}
-                NISN: ${nisn}
-                Tempat Lahir: ${birthPlace}
-                Tanggal Lahir: ${birthDate}
-                Jenis Kelamin: ${genderText}
-                Alamat: ${address}
-                No. HP/WA: ${phoneNumber}
-                Email: ${email}
+*DATA SISWA*
+Nama Lengkap: ${fullName}
+NISN: ${nisn}
+Tempat Lahir: ${birthPlace}
+Tanggal Lahir: ${birthDate}
+Jenis Kelamin: ${genderText}
+Alamat: ${address}
+No. HP/WA: ${phoneNumber}
+Email: ${email}
 
-                *DATA ORANG TUA/WALI*
-                Nama Orang Tua/Wali: ${parentName}
-                No. HP Orang Tua/Wali: ${parentPhone}
+*DATA ORANG TUA/WALI*
+Nama Orang Tua/Wali: ${parentName}
+No. HP Orang Tua/Wali: ${parentPhone}
 
-                *DATA PENDAFTARAN*
-                Asal Sekolah: ${school}
-                Pilihan Jurusan: ${competencyText}
-                Sumber Informasi: ${referral}
-                Nama Referensi: ${referralName}
-
-                *Saya mendaftar untuk KUOTA PROMO GRATIS DSP*
+*DATA PENDAFTARAN*
+Asal Sekolah: ${school}
+Pilihan Jurusan: ${competencyText}
+Sumber Informasi: ${referral}
+Nama Referensi: ${referralName}
                 `;
 
                 // Encode pesan untuk URL WhatsApp
