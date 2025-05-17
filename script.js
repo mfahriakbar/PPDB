@@ -168,7 +168,7 @@ Nama Referensi: ${referralName}
                 const encodedMessage = encodeURIComponent(whatsappMessage);
 
                 // Nomor WhatsApp Bu Ari
-                const whatsappNumber = '6285711674079';
+                const whatsappNumber = '6289617354862';
 
                 // Membuat URL WhatsApp
                 const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
